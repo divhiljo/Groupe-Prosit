@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCM Méthodologies de Développement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            max-width: 800px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        .question {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .options {
+            margin-left: 20px;
+        }
+        .option {
+            margin: 8px 0;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 30px auto;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        #results {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+        .correct {
+            color: #27ae60;
+            font-weight: bold;
+        }
+        .incorrect {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>QCM sur les Méthodologies de Développement et Principes de Conception Logicielle</h1>
+    
+    <p>Voici un QCM interactif de 20 questions qui couvre les compétences demandées. Pour chaque question, sélectionnez la ou les bonnes réponses, puis cliquez sur "Vérifier les réponses" à la fin pour obtenir votre score et les corrections.</p>
+    
+    <form id="quiz-form">
+        <!-- Question 1 -->
+        <div class="question">
+            <p><strong>1. Parmi ces méthodologies, laquelle fait partie des méthodes dites "agiles"?</strong></p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q1" value="0"> Cycle en V</div>
+                <div class="option"><input type="radio" name="q1" value="1"> Cascade (Waterfall)</div>
+                <div class="option"><input type="radio" name="q1" value="2"> Scrum</div>
+                <div class="option"><input type="radio" name="q1" value="3"> Modèle en spirale</div>
+            </div>
+        </div>
+        
+        <!-- Question 2 -->
+        <div class="question">
+            <p><strong>2. Quels sont les avantages de la méthodologie Cascade (Waterfall)? (Plusieurs réponses possibles)</strong></p>
+            <div class="options">
+                <div class="option"><input type="checkbox" name="q2" value="0"> Documentation complète et détaillée</div>
+                <div class="option"><input type="checkbox" name="q2" value="1"> Adaptabilité aux changements en cours de projet</div>
+                <div class="option"><input type="checkbox" name="q2" value="2"> Structure claire et phases bien définies</div>
+                <div class="option"><input type="checkbox" name="q2" value="3"> Livraison rapide de fonctionnalités</div>
+            </div>
+        </div>
+        
+        <!-- Question 3 -->
+        <div class="question">
+            <p><strong>3. Lequel de ces principes ne fait PAS partie de l'acronyme SOLID?</strong></p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q3" value="0"> Single Responsibility Principle</div>
+                <div class="option"><input type="radio" name="q3" value="1"> Open/Closed Principle</div>
+                <div class="option"><input type="radio" name="q3" value="2"> Dependency Inversion Principle</div>
+                <div class="option"><input type="radio" name="q3" value="3"> Interface Segregation Principle</div>
+                <div class="option"><input type="radio" name="q3" value="4"> Low Coupling High Cohesion Principle</div>
+            </div>
+        </div>
+        
+        <!-- Question 4 -->
+        <div class="question">
+            <p><strong>4. Dans la méthodologie Scrum, qu'est-ce qu'un "Sprint"?</strong></p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q4" value="0"> Une réunion quotidienne</div>
+                <div class="option"><input type="radio" name="q4" value="1"> Une période de développement de 2 à 4 semaines</div>
+                <div class="option"><input type="radio" name="q4" value="2"> Un document de spécifications</div>
+                <div class="option"><input type="radio" name="q4" value="3"> Un outil de gestion de version</div>
+            </div>
+        </div>
+        
+        <!-- Question 5 -->
+        <div class="question">
+            <p><strong>5. Quel est le principal inconvénient du Cycle en V par rapport aux méthodes agiles?</strong></p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q5" value="0"> Manque de documentation</div>
+                <div class="option"><input type="radio" name="q5" value="1"> Difficulté à gérer les changements en cours de projet</div>
+                <div class="option"><input type="radio" name="q5" value="2"> Absence de tests</div>
+                <div class="option"><input type="radio" name="q5" value="3"> Coût élevé de mise en œuvre</div>
+            </div>
+        </div>
+        
+        <!-- Question 6 -->
+        <div class="question">
+            <p><strong>6. Parmi ces éléments, lesquels sont des facteurs clés de succès en gestion de projet? (Plusieurs réponses possibles)</strong></p>
+            <div class="options">
+                <div class="option"><input type="checkbox" name="q6" value="0"> Implication du client</div>
+                <div class="option"><input type="checkbox" name="q6" value="1"> Documentation exhaustive</div>
+                <div class="option"><input type="checkbox" name="q6" value="2"> Communication efficace</div>
+                <div class="option"><input type="checkbox" name="q6" value="3"> Planification rigide</div>
+            </div>
+        </div>
+        
+        <!-- Question 7 -->
+        <div class="question">
+            <p><strong>7. Quel design pattern permet de créer des objets sans spécifier leur classe concrète?</strong></p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q7" value="0"> Singleton</div>
+                <div class="option"><input type="radio" name="q7" value="1"> Factory</div>
+                <div class="option"><input type="radio" name="q7" value="2"> Observer</div>
+                <div class="option"><input type="radio" name="q7" value="3"> Strategy</div>
+            </div>
+        </div>
+        
+        <!-- Question 8 -->
+        <div class="question">
+            <p><strong>8. Dans les méthodes agiles, que signifie l'expression "time boxing"?</strong></p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q8" value="0"> Attribution de ressources temporelles fixes à certaines activités</div>
+                <div class="option"><input type="radio" name="q8" value="1"> Estimation du temps de développement</div>
+                <div class="option"><input type="radio" name="q8" value="2"> Calcul du retour sur investissement</div>
+                <div class="option"><input type="radio" name="q8" value="3"> Gestion des plannings</div>
+            </div>
+        </div>
+        
+        <!-- Question 9 -->
+        <div class="question">
+            <p><strong>9. Le principe de ségrégation d'interface (ISP) stipule que:</strong></p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q9" value="0"> Les interfaces doivent être petites et spécifiques plutôt que générales</div>
+                <div class="option"><input type="radio" name="q9" value="1"> Les interfaces doivent contenir le maximum de méthodes</div>
+                <div class="option"><input type="radio" name="q9" value="2"> Une classe ne doit implémenter qu'une seule interface</div>
+                <div class="option"><input type="radio" name="q9" value="3"> Les interfaces sont optionnelles en programmation orientée objet</div>
+            </div>
+        </div>
+        
+        <!-- Question 10 -->
+        <div class="question">
+            <p><strong>10. Quelle méthodologie serait la plus adaptée pour un projet avec des exigences stables et bien définies?</strong></p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q10" value="0"> Scrum</div>
+                <div class="option"><input type="radio" name="q10" value="1"> Cascade (Waterfall)</div>
+                <div class="option"><input type="radio" name="q10" value="2"> Extreme Programming</div>
+                <div class="option"><input type="radio" name="q10" value="3"> Kanban</div>
+            </div>
+        </div>
+        
+        <!-- Question 11 -->
+        <div class="question">
+            <p><strong>11. Quel est le rôle principal des design patterns?</strong></p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q11" value="0"> Fournir des solutions standards à des problèmes courants de conception</div>
+                <div class="option"><input type="radio" name="q11" value="1"> Remplacer les principes SOLID</div>
+                <div class="option"><input type="radio" name="q11" value="2"> Garantir des performances optimales</div>
+                <div class="option"><input type="radio" name="q11" value="3"> Imposer un langage de programmation spécifique</div>
+            </div>
+        </div>
+        
+        <!-- Question 12 -->
+        <div class="question">
+            <p><strong>12. Dans Scrum, qui est responsable de maximiser la valeur du produit?</strong></p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q12" value="0"> L'équipe de développement</div>
+                <div class="option"><input type="radio" name="q12" value="1"> Le Scrum Master</div>
+                <div class="option"><input type="radio" name="q12" value="2"> Le Product Owner</div>
+                <div class="option"><input type="radio" name="q12" value="3"> Le client</div>
+            </div>
+        </div>
+        
+        <!-- Question 13 -->
+        <div class="question">
+            <p><strong>13. Le principe d'inversion de dépendance (DIP) indique que:</strong></p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q13" value="0"> Les modules de haut niveau ne doivent pas dépendre des modules de bas niveau</div>
+                <div class="option"><input type="radio" name="q13" value="1"> Les dépendances doivent être réduites au maximum</div>
+                <div class="option"><input type="radio" name="q13" value="2"> Les classes doivent avoir le moins de méthodes possible</div>
+                <div class="option"><input type="radio" name="q13" value="3"> L'héritage multiple doit être évité</div>
+            </div>
+        </div>
+        
+        <!-- Question 14 -->
+        <div class="question">
+            <p><strong>14. Quelle est la principale caractéristique qui différencie les méthodes agiles des méthodes séquentielles?</strong></p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q14" value="0"> L'itérativité et l'adaptabilité aux changements</div>
+                <div class="option"><input type="radio" name="q14" value="1"> La présence de tests automatisés</div>
+                <div class="option"><input type="radio" name="q14" value="2"> L'utilisation de tableaux Kanban</div>
+                <div class="option"><input type="radio" name="q14" value="3"> L'absence de documentation</div>
+            </div>
+        </div>
+        
+        <!-- Question 15 -->
+        <div class="question">
+            <p><strong>15. Parmi ces éléments, lesquels relèvent de l'architecture logicielle? (Plusieurs réponses possibles)</strong></p>
+            <div class="options">
+                <div class="option"><input type="checkbox" name="q15" value="0"> Structure globale d'un système</div>
+                <div class="option"><input type="checkbox" name="q15" value="1"> Implémentation détaillée des algorithmes</div>
+                <div class="option"><input type="checkbox" name="q15" value="2"> Interactions entre les modules</div>
+                <div class="option"><input type="checkbox" name="q15" value="3"> Choix des technologies</div>
+            </div>
+        </div>
+        
+        <!-- Question 16 -->
+        <div class="question">
+            <p><strong>16. Quelle méthodologie est particulièrement adaptée aux projets avec des exigences changeantes?</strong></p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q16" value="0"> Cycle en V</div>
+                <div class="option"><input type="radio" name="q16" value="1"> Cascade (Waterfall)</div>
+                <div class="option"><input type="radio" name="q16" value="2"> Scrum</div>
+                <div class="option"><input type="radio" name="q16" value="3"> Modèle en cascade itératif</div>
+            </div>
+        </div>
+        
+        <!-- Question 17 -->
+        <div class="question">
+            <p><strong>17. Le pattern Observer est utile pour:</strong></p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q17" value="0"> Notifier des objets des changements d'état d'autres objets</div>
+                <div class="option"><input type="radio" name="q17" value="1"> Créer une seule instance d'une classe</div>
+                <div class="option"><input type="radio" name="q17" value="2"> Encapsuler une requête dans un objet</div>
+                <div class="option"><input type="radio" name="q17" value="3"> Ajouter dynamiquement des responsabilités à un objet</div>
+            </div>
+        </div>
+        
+        <!-- Question 18 -->
+        <div class="question">
+            <p><strong>18. Quel est l'avantage principal des méthodes agiles pour le client?</strong></p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q18" value="0"> Documentation complète</div>
+                <div class="option"><input type="radio" name="q18" value="1"> Visibilité et capacité à faire évoluer les exigences</div>
+                <div class="option"><input type="radio" name="q18" value="2"> Coût fixe et prédictible</div>
+                <div class="option"><input type="radio" name="q18" value="3"> Processus de développement plus long mais plus stable</div>
+            </div>
+        </div>
+        
+        <!-- Question 19 -->
+        <div class="question">
+            <p><strong>19. Le principe ouvert/fermé (OCP) stipule que:</strong></p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q19" value="0"> Les entités logicielles doivent être ouvertes à l'extension mais fermées à la modification</div>
+                <div class="option"><input type="radio" name="q19" value="1"> Le code source doit être accessible mais non modifiable</div>
+                <div class="option"><input type="radio" name="q19" value="2"> Les classes doivent avoir des méthodes privées et publiques</div>
+                <div class="option"><input type="radio" name="q19" value="3"> Les interfaces doivent être publiques et les implémentations privées</div>
+            </div>
+        </div>
+        
+        <!-- Question 20 -->
+        <div class="question">
+            <p><strong>20. Quel rôle joue l'architecture logicielle dans un projet?</strong></p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q20" value="0"> Elle définit la structure fondamentale et les concepts du système</div>
+                <div class="option"><input type="radio" name="q20" value="1"> Elle remplace la nécessité de tests</div>
+                <div class="option"><input type="radio" name="q20" value="2"> Elle garantit des performances optimales</div>
+                <div class="option"><input type="radio" name="q20" value="3"> Elle évite la nécessité de documentation</div>
+            </div>
+        </div>
+        
+        <button type="button" onclick="checkAnswers()">Vérifier les réponses</button>
+    </form>
+    
+    <div id="results">
+        <h3>Résultats:</h3>
+        <p id="score"></p>
+        <div id="corrections"></div>
+    </div>
+
+    <script>
+        // Réponses correctes
+        const correctAnswers = {
+            1: 2, // Scrum
+            2: [0, 2], // Documentation complète et détaillée, Structure claire et phases bien définies
+            3: 4, // Low Coupling High Cohesion Principle
+            4: 1, // Une période de développement de 2 à 4 semaines
+            5: 1, // Difficulté à gérer les changements en cours de projet
+            6: [0, 2], // Implication du client, Communication efficace
+            7: 1, // Factory
+            8: 0, // Attribution de ressources temporelles fixes à certaines activités
+            9: 0, // Les interfaces doivent être petites et spécifiques plutôt que générales
+            10: 1, // Cascade (Waterfall)
+            11: 0, // Fournir des solutions standards à des problèmes courants de conception
+            12: 2, // Le Product Owner
+            13: 0, // Les modules de haut niveau ne doivent pas dépendre des modules de bas niveau
+            14: 0, // L'itérativité et l'adaptabilité aux changements
+            15: [0, 2, 3], // Structure globale d'un système, Interactions entre les modules, Choix des technologies
+            16: 2, // Scrum
+            17: 0, // Notifier des objets des changements d'état d'autres objets
+            18: 1, // Visibilité et capacité à faire évoluer les exigences
+            19: 0, // Les entités logicielles doivent être ouvertes à l'extension mais fermées à la modification
+            20: 0 // Elle définit la structure fondamentale et les concepts du système
+        };
+
+        function checkAnswers() {
+            let score = 0;
+            let correctionsHTML = "<ol>";
+
+            for (let i = 1; i <= 20; i++) {
+                const question = document.querySelectorAll(`input[name="q${i}"]`);
+                let selected = [];
+                let isCorrect = false;
+
+                question.forEach((input, index) => {
+                    if (input.checked) {
+                        selected.push(index);
+                    }
+                });
+
+                if (Array.isArray(correctAnswers[i])) {
+                    // Question à choix multiple
+                    if (selected.length === correctAnswers[i].length && 
+                        correctAnswers[i].every(val => selected.includes(val))) {
+                        score++;
+                        isCorrect = true;
+                    }
+                } else {
+                    // Question à choix unique
+                    if (selected.length === 1 && selected[0] === correctAnswers[i]) {
+                        score++;
+                        isCorrect = true;
+                    }
+                }
+
+                correctionsHTML += `<li>Question ${i}: <span class="${isCorrect ? 'correct' : 'incorrect'}">${isCorrect ? "✓ Correct" : "✗ Incorrect"}</span></li>`;
+            }
+
+            correctionsHTML += "</ol>";
+            
+            document.getElementById("score").textContent = `Score: ${score}/20 (${(score/20*100).toFixed(1)}%)`;
+            document.getElementById("corrections").innerHTML = correctionsHTML;
+            document.getElementById("results").style.display = "block";
+            
+            // Scroll to results
+            document.getElementById("results").scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
